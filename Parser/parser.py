@@ -221,11 +221,14 @@ class Tree:
 Invoke script with:
 parsey.py {path_to_dump_tree_text_file} {directory_to_export_csvs_to}
 """
-dump_tree_path = sys.argv[1]
-output_path = sys.argv[2]
+if len(sys.argv) < 2:
+    print("Error - parser requires 2 inputs: path to dump tree text file, destination path for CSV files")
+else:
+    dump_tree_path = sys.argv[1]
+    output_path = sys.argv[2]
 
-dump_tree = dump_tree_path.split("\\")[-1]
-problem = dump_tree.split(".txt")[0]
+    dump_tree = dump_tree_path.split("\\")[-1]
+    problem = dump_tree.split(".txt")[0]
 
-t = Tree(dump_tree_path)
-t.export_tree(output_path + "\\" + problem)
+    t = Tree(dump_tree_path)
+    t.export_tree(output_path + "\\" + problem)
