@@ -12,17 +12,31 @@ SET parser_script=.\Parser\parser.py
 
 REM No variable ordering or pre-processing
 
-echo Minion...
+echo Minion solving...
 %minion_exe% %minion_file_path% -dumptree > %dump_tree%_None_None.txt"
-echo Python...
+echo Python parsing...
 python %parser_script% %dump_tree%_None_None.txt" %output_path%
+
+REM All variable orderings, no pre-processing
 
 SET var_orderings=sdf srf ldf static
 
-FOR %%a IN (%var_orderings%) DO (
-	echo %%a
-	echo Running Minion...
-	%minion_exe% %minion_file_path% -varorder %%a -dumptree > %dump_tree%_%%a_None.txt"
+FOR %%v IN (%var_orderings%) DO (
+	echo -varorder %%v
+	echo Minion solving...
+	%minion_exe% %minion_file_path% -varorder %%v -dumptree > %dump_tree%_%%v_None.txt"
 	echo Python parsing...
-	python %parser_script% %dump_tree%_%%a_None.txt" %output_path%
+	python %parser_script% %dump_tree%_%%v_None.txt" %output_path%
+)
+
+REM No variable orderings, all pre-processing
+
+SET pre_processings=GAC SAC SACBounds SSAC SSACBounds
+
+FOR %%p IN (%pre_processings%) DO (
+	echo -preprocess %%p
+	echo Minion solving...
+	%minion_exe% %minion_file_path% -preprocess %%p -dumptree > %dump_tree%_None_%%p.txt"
+	echo Python parsing...
+	python %parser_script% %dump_tree%_None_%%p.txt" %output_path%
 )
