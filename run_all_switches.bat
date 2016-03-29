@@ -40,3 +40,13 @@ FOR %%p IN (%pre_processings%) DO (
 	echo Python parsing...
 	python %parser_script% %dump_tree%_None_%%p.txt" %output_path%
 )
+
+FOR %%v IN (%var_orderings%) DO (
+	FOR %%p IN (%pre_processings%) DO (
+		echo -varorder %%v -preprocess %%p
+		echo Minion solving...
+		%minion_exe% %minion_file_path% -varorder %%v -preprocess %%p -dumptree > %dump_tree%_%%v_%%p.txt"
+		echo Python parsing...
+		python %parser_script% %dump_tree%_%%v_%%p.txt" %output_path%
+	)
+)
