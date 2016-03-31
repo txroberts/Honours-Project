@@ -1,7 +1,7 @@
 @echo off
 REM Run all variable ordering and pre-processing switches on a Minion file and create a Neo4j database for each combination
 REM Invoke with:
-REM run_all_switches.bat {path_to_minion_file} {output_directory}
+REM run_all_switches.bat {minion_file} {output_directory}
 
 SET minion_exe=".\minion.exe"
 SET minion_file_path=%1
