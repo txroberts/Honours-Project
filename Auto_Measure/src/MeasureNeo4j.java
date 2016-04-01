@@ -14,6 +14,9 @@ public class MeasureNeo4j {
 
     /**
      * @param args the command line arguments
+     * 
+     * Invoke with:
+     * MeasureNeo4j {directory_of_neo4j_databases} {data_output_csv_file)
      */
     public static void main(String[] args) {
         if (args.length == 2) {
@@ -36,7 +39,7 @@ public class MeasureNeo4j {
                     System.out.println("Accessing " + db_name);
                     SearchTree tree = new SearchTree(db_path);
 
-                    System.out.println("Measuring " + db_name);
+                    System.out.println("Measuring tree");
                     long bt_left_branches = tree.getBtLeftBranches();
                     double avg_length = tree.getAvgLength();
                     long num_outlier_branches = tree.getNumOutlierBranches();
