@@ -39,10 +39,14 @@ public class SearchTree {
         String query = "MATCH (:Assignment)<-[left_branch:EQUALS]-(a:Assignment)-[:NOT_EQUALS]->(right:Assignment) ";
         query = query + "SET left_branch.length = abs(toInt(right.node_num) - toInt(a.node_num)) - 1";
         
-        try (Transaction tx = graphDb.beginTx()){
+        Transaction tx = graphDb.beginTx();
+        
+        try {
             graphDb.execute(query);
             
             tx.success();
+        } finally {
+            tx.close();
         }
     }
     
@@ -51,11 +55,15 @@ public class SearchTree {
         String query = "MATCH (:Assignment)<-[left_branch:EQUALS]-(a:Assignment)-[:NOT_EQUALS]->(right:Assignment) ";
         query = query + "RETURN count(a) AS bt_left_branches";
         
-        try (Transaction tx = graphDb.beginTx()){
+        Transaction tx = graphDb.beginTx();
+        
+        try {
             Result result = graphDb.execute(query);
             tx.success();
             
             return (long) result.next().get("bt_left_branches");
+        } finally {
+            tx.close();
         }
     }
     
@@ -65,11 +73,15 @@ public class SearchTree {
         query = query + "WITH left_branch.length AS left_branch_assignments ";
         query = query + "RETURN avg(left_branch_assignments)";
         
-        try (Transaction tx = graphDb.beginTx()){
+        Transaction tx = graphDb.beginTx();
+        
+        try {
             Result result = graphDb.execute(query);
             
             tx.success();            
             return (double) result.next().get("avg(left_branch_assignments)");
+        } finally {
+            tx.close();
         }
     }
     
@@ -84,11 +96,15 @@ public class SearchTree {
         query = query + "WHERE left_branch_assignments < lower_bound or left_branch_assignments > upper_bound ";
         query = query + "RETURN count(left_branch_assignments)";
         
-        try (Transaction tx = graphDb.beginTx()){
+        Transaction tx = graphDb.beginTx();
+        
+        try {
             Result result = graphDb.execute(query);
             
             tx.success();            
             return (long) result.next().get("count(left_branch_assignments)");
+        } finally {
+            tx.close();
         }
     }
     
@@ -99,11 +115,15 @@ public class SearchTree {
         query = query + "MATCH (all_assignments:Assignment) ";
         query = query + "RETURN toFloat(bt_assignments_count) / toFloat(count(all_assignments)) AS score";
         
-        try (Transaction tx = graphDb.beginTx()){
+        Transaction tx = graphDb.beginTx();
+        
+        try {
             Result result = graphDb.execute(query);
             
             tx.success();            
             return (double) result.next().get("score");
+        } finally {
+            tx.close();
         }
     }
     
@@ -114,11 +134,15 @@ public class SearchTree {
         query = query + "MATCH (a:Assignment) ";
         query = query + "RETURN count_dead_ends / toFloat(count(a)) AS ratio";
         
-        try (Transaction tx = graphDb.beginTx()){
+        Transaction tx = graphDb.beginTx();
+        
+        try {
             Result result = graphDb.execute(query);
             
             tx.success();            
             return (double) result.next().get("ratio");
+        } finally {
+            tx.close();
         }
     }
     
@@ -129,11 +153,15 @@ public class SearchTree {
         query = query + "ORDER BY left_branch_assignments DESC ";
         query = query + "LIMIT 1";
         
-        try (Transaction tx = graphDb.beginTx()){
+        Transaction tx = graphDb.beginTx();
+        
+        try {
             Result result = graphDb.execute(query);
             
             tx.success();            
             return (double) result.next().get("left_branch_assignments");
+        } finally {
+            tx.close();
         }
     }
 }
