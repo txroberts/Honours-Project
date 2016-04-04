@@ -29,6 +29,10 @@ public class SearchTree {
         } );
     }
     
+    void shutDownDB(){
+        graphDb.shutdown();
+    }
+    
     private void addBranchLengths(){
         // Sets an attribute in left branches linked to nodes that also right branched
         // How many assignments were made that were eventually backtracked

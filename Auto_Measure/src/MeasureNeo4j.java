@@ -46,6 +46,8 @@ public class MeasureNeo4j {
                     double prop_score = tree.getPropScore();
                     double de_ratio = tree.getDEARatio();
                     double longest_branch = tree.getLongestBranch();
+                    
+                    tree.shutDownDB();
 
                     // Create the output file and add column headers (if it doesn't exist)
                     if (!new File(output_data_csv).exists()) {
