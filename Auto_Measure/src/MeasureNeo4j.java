@@ -1,4 +1,3 @@
-
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -46,12 +45,13 @@ public class MeasureNeo4j {
                     double prop_score = tree.getPropScore();
                     double de_ratio = tree.getDEARatio();
                     double longest_branch = tree.getLongestBranch();
+                    int longest_good_chain = tree.getLongestEqualsChain();
                     
                     tree.shutDownDB();
 
                     // Create the output file and add column headers (if it doesn't exist)
                     if (!new File(output_data_csv).exists()) {
-                        System.out.println("Creating data file");
+                        System.out.println("Creating data CSV file");
 
                         FileWriter fileWriter;
                         try {
@@ -61,25 +61,31 @@ public class MeasureNeo4j {
                             printWriter.println("Problem,Variable Ordering,Pre-processing,Measure,Data");
 
                             fileWriter.close();
+                            System.out.println("Data CSV file created");
                         } catch (IOException ex) {
+                            System.out.println("Error creating data CSV file");
                             Logger.getLogger(MeasureNeo4j.class.getName()).log(Level.SEVERE, null, ex);
                         }
                     }
+                    
+                    String problemDetails = problem + "," + varOrdering + "," + preProcessing;
 
                     // Append the data to the file
                     System.out.println("Appending data");
                     try (FileWriter fileWriter = new FileWriter(output_data_csv, true)) {
                         try (PrintWriter printWriter = new PrintWriter(fileWriter)) {
-                            printWriter.printf("%s,%s,%s,%s,%d%n", problem, varOrdering, preProcessing, "Number of Backtracked Left Branches", bt_left_branches);
-                            printWriter.printf("%s,%s,%s,%s,%f%n", problem, varOrdering, preProcessing, "Average Left Branch Length", avg_length);
-                            printWriter.printf("%s,%s,%s,%s,%d%n", problem, varOrdering, preProcessing, "Number of Outlier Left Branches", num_outlier_branches);
-                            printWriter.printf("%s,%s,%s,%s,%f%n", problem, varOrdering, preProcessing, "Normalised Constraint Propagation Score", prop_score);
-                            printWriter.printf("%s,%s,%s,%s,%f%n", problem, varOrdering, preProcessing, "Dead Ends/Assignments Ratio", de_ratio);
-                            printWriter.printf("%s,%s,%s,%s,%f%n", problem, varOrdering, preProcessing, "Longest backtracked left branch", longest_branch);
+                            printWriter.printf("%s,%s,%d%n", problemDetails, "Number of Backtracked Left Branches", bt_left_branches);
+                            printWriter.printf("%s,%s,%f%n", problemDetails, "Average Left Branch Length", avg_length);
+                            printWriter.printf("%s,%s,%d%n", problemDetails, "Number of Outlier Left Branches", num_outlier_branches);
+                            printWriter.printf("%s,%s,%f%n", problemDetails, "Normalised Constraint Propagation Score", prop_score);
+                            printWriter.printf("%s,%s,%f%n", problemDetails, "Dead Ends/Assignments Ratio", de_ratio);
+                            printWriter.printf("%s,%s,%f%n", problemDetails, "Longest backtracked left branch", longest_branch);
+                            printWriter.printf("%s,%s,%d%n", problemDetails, "Longest chain of successful assignments", longest_good_chain);
 
                             System.out.println(db_name + " finished\n");
                         }
                     } catch (IOException e) {
+                        System.out.println("Error appending " + db_name + " data to CSV\n");
                         e.printStackTrace(System.out);
                     }
                 }

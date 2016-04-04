@@ -164,4 +164,41 @@ public class SearchTree {
             tx.close();
         }
     }
+    
+    int getLongestEqualsChain(){
+        // Get the longest chain of successful assignments
+        String query = "MATCH ()-[rin]->(start:Assignment)-[rout]->() ";
+        query = query + "WITH start, collect(DISTINCT type(rin)) AS incoming, collect(DISTINCT type(rout)) AS outgoing ";
+        query = query + "WHERE all(rel in incoming WHERE rel = 'NOT_EQUALS') ";
+        query = query + "AND all(rel in outgoing WHERE rel = 'EQUALS') ";
+        query = query + "WITH start ";
+
+        query = query + "MATCH ()-[rin]->(end:Assignment)-[rout]->() ";
+        query = query + "WITH start, end, collect(DISTINCT type(rin)) AS incoming, collect(DISTINCT type(rout)) AS outgoing ";
+        query = query + "WHERE all(rel in incoming WHERE rel = 'EQUALS') ";
+        query = query + "AND all(rel in outgoing WHERE rel = 'EQUALS') ";
+        query = query + "WITH start, end ";
+
+        query = query + "MATCH path = (start)-[:EQUALS*]->(end) ";
+        query = query + "WITH DISTINCT start, max(end.node_num) AS end_node ";
+        query = query + "MATCH path = (start)-[:EQUALS*]->(end {node_num: end_node}) ";
+        query = query + "RETURN length(path) AS path_length ";
+        query = query + "ORDER BY path_length DESC ";
+        query = query + "LIMIT 1";
+        
+        Transaction tx = graphDb.beginTx();
+        
+        try {
+            Result result = graphDb.execute(query);
+            
+            if (result.hasNext()){
+                tx.success();
+                return (int) result.next().get("path_length");
+            }
+        } finally {
+            tx.close();
+        }
+        
+        return 0; // if the db doesn't return a path
+    }
 }
