@@ -21,11 +21,32 @@ public class MeasureNeo4j {
         if (args.length == 2) {
             String db_directory_path = args[0];
             String output_data_csv = args[1];
+            
+            // Create the output file and add column headers (if it doesn't exist)
+            if (!new File(output_data_csv).exists()) {
+                try {
+                    FileWriter fileWriter = new FileWriter(output_data_csv, true);
+
+                    PrintWriter printWriter = new PrintWriter(fileWriter);
+                    printWriter.println("Problem,Variable Ordering,Pre-processing,Measure,Data");
+
+                    fileWriter.close();
+                    printWriter.close();
+                    System.out.println("Auto data CSV file created...");
+                } catch (IOException ex) {
+                    System.out.println("Error creating data CSV file");
+                    Logger.getLogger(MeasureNeo4j.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
 
             File[] files = new File(db_directory_path).listFiles();
-            for (File file : files) {
-                if (file.isDirectory()) {
-                    String db_path = file.getAbsolutePath();
+            
+            for (int i = 0; i < files.length; i++) {
+                int percent = (int) (100.0 * (i / (float) files.length));
+                System.out.print("\r" + percent + "% of databases measured");
+                
+                if (files[i].isDirectory()) {
+                    String db_path = files[i].getAbsolutePath();
 
                     String[] db_path_parts = db_path.split("\\\\");
                     String db_name = db_path_parts[db_path_parts.length - 1];
@@ -35,10 +56,8 @@ public class MeasureNeo4j {
                     String varOrdering = db_name_parts[1];
                     String preProcessing = db_name_parts[2];
 
-                    System.out.println("Accessing " + db_name);
                     SearchTree tree = new SearchTree(db_path);
 
-                    System.out.println("Measuring tree");
                     long bt_left_branches = tree.getBtLeftBranches();
                     double avg_length = tree.getAvgLength();
                     long num_outlier_branches = tree.getNumOutlierBranches();
@@ -48,48 +67,30 @@ public class MeasureNeo4j {
                     int longest_good_chain = tree.getLongestEqualsChain();
                     
                     tree.shutDownDB();
-
-                    // Create the output file and add column headers (if it doesn't exist)
-                    if (!new File(output_data_csv).exists()) {
-                        System.out.println("Creating data CSV file");
-
-                        FileWriter fileWriter;
-                        try {
-                            fileWriter = new FileWriter(output_data_csv, true);
-
-                            PrintWriter printWriter = new PrintWriter(fileWriter);
-                            printWriter.println("Problem,Variable Ordering,Pre-processing,Measure,Data");
-
-                            fileWriter.close();
-                            System.out.println("Data CSV file created");
-                        } catch (IOException ex) {
-                            System.out.println("Error creating data CSV file");
-                            Logger.getLogger(MeasureNeo4j.class.getName()).log(Level.SEVERE, null, ex);
-                        }
-                    }
                     
                     String problemDetails = problem + "," + varOrdering + "," + preProcessing;
 
                     // Append the data to the file
-                    System.out.println("Appending data");
-                    try (FileWriter fileWriter = new FileWriter(output_data_csv, true)) {
-                        try (PrintWriter printWriter = new PrintWriter(fileWriter)) {
-                            printWriter.printf("%s,%s,%d%n", problemDetails, "Number of Backtracked Left Branches", bt_left_branches);
-                            printWriter.printf("%s,%s,%f%n", problemDetails, "Average Left Branch Length", avg_length);
-                            printWriter.printf("%s,%s,%d%n", problemDetails, "Number of Outlier Left Branches", num_outlier_branches);
-                            printWriter.printf("%s,%s,%f%n", problemDetails, "Normalised Constraint Propagation Score", prop_score);
-                            printWriter.printf("%s,%s,%f%n", problemDetails, "Dead Ends/Assignments Ratio", de_ratio);
-                            printWriter.printf("%s,%s,%f%n", problemDetails, "Longest backtracked left branch", longest_branch);
-                            printWriter.printf("%s,%s,%d%n", problemDetails, "Longest chain of successful assignments", longest_good_chain);
+                    try {
+                        FileWriter fileWriter = new FileWriter(output_data_csv, true);
+                        
+                        PrintWriter printWriter = new PrintWriter(fileWriter);
+                        printWriter.printf("%s,%s,%d%n", problemDetails, "Number of Backtracked Left Branches", bt_left_branches);
+                        printWriter.printf("%s,%s,%f%n", problemDetails, "Average Left Branch Length", avg_length);
+                        printWriter.printf("%s,%s,%d%n", problemDetails, "Number of Outlier Left Branches", num_outlier_branches);
+                        printWriter.printf("%s,%s,%f%n", problemDetails, "Normalised Constraint Propagation Score", prop_score);
+                        printWriter.printf("%s,%s,%f%n", problemDetails, "Dead Ends/Assignments Ratio", de_ratio);
+                        printWriter.printf("%s,%s,%f%n", problemDetails, "Longest backtracked left branch", longest_branch);
+                        printWriter.printf("%s,%s,%d%n", problemDetails, "Longest chain of successful assignments", longest_good_chain);
 
-                            System.out.println(db_name + " finished\n");
-                        }
-                    } catch (IOException e) {
-                        System.out.println("Error appending " + db_name + " data to CSV\n");
-                        e.printStackTrace(System.out);
+                        printWriter.close();
+                        fileWriter.close();
+                    } catch (IOException ex) {
+                        Logger.getLogger(MeasureNeo4j.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }
             }
+            System.out.print("\r100% of databases measured\n");
         } else {
             System.out.println("Error - Expects:");
             System.out.println("(1) Directory of Neo4j databases");
