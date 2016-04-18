@@ -51,7 +51,7 @@ public class SearchTree {
     }
     
     long getBtLeftBranches(){
-        // The number of assignments that have left branches that were eventually right branched
+        // The number of assignments that have left branches that were eventually right branched to a valid assignment
         String query = "MATCH (:Assignment)<-[left_branch:EQUALS]-(a:Assignment)-[:NOT_EQUALS]->(right:Assignment) ";
         query = query + "RETURN count(a) AS bt_left_branches";
         
@@ -167,9 +167,10 @@ public class SearchTree {
     
     int getLongestEqualsChain(){
         // Get the longest chain of successful assignments
-        String query = "MATCH ()-[rin]->(start:Assignment)-[rout]->() ";
+        String query = "MATCH (start:Assignment)-[rout]->() ";
+        query = query + "OPTIONAL MATCH ()-[rin]->(start) ";
         query = query + "WITH start, collect(DISTINCT type(rin)) AS incoming, collect(DISTINCT type(rout)) AS outgoing ";
-        query = query + "WHERE all(rel in incoming WHERE rel = 'NOT_EQUALS') ";
+        query = query + "WHERE none(rel in incoming WHERE rel = 'EQUALS') ";
         query = query + "AND all(rel in outgoing WHERE rel = 'EQUALS') ";
         query = query + "WITH start ";
 
