@@ -15,12 +15,12 @@ public class MeasureNeo4j {
      * @param args the command line arguments
      * 
      * Invoke with:
-     * MeasureNeo4j {directory_of_neo4j_databases} {data_output_csv_file)
+     * MeasureNeo4j {directory_of_neo4j_databases} {data_output_directory)
      */
     public static void main(String[] args) {
         if (args.length == 2) {
             String db_directory_path = args[0];
-            String output_data_csv = args[1];
+            String output_data_csv = args[1] + "\\auto_data.csv";
             
             // Create the output file and add column headers (if it doesn't exist)
             if (!new File(output_data_csv).exists()) {
@@ -42,8 +42,7 @@ public class MeasureNeo4j {
             File[] files = new File(db_directory_path).listFiles();
             
             for (int i = 0; i < files.length; i++) {
-                int percent = (int) (100.0 * (i / (float) files.length));
-                System.out.print("\r" + percent + "% of databases measured");
+                System.out.println((i+1) + "/" + files.length);
                 
                 if (files[i].isDirectory()) {
                     String db_path = files[i].getAbsolutePath();
@@ -94,7 +93,7 @@ public class MeasureNeo4j {
         } else {
             System.out.println("Error - Expects:");
             System.out.println("(1) Directory of Neo4j databases");
-            System.out.println("(2) Output CSV file");
+            System.out.println("(2) Directory to output data CSV file to");
         }
     }
 }
