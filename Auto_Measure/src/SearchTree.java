@@ -43,7 +43,6 @@ public class SearchTree {
         
         try {
             graphDb.execute(query);
-            
             tx.success();
         } finally {
             tx.close();
@@ -52,8 +51,8 @@ public class SearchTree {
     
     long getBtLeftBranches(){
         // The number of assignments that have left branches that were eventually right branched to a valid assignment
-        String query = "MATCH (:Assignment)<-[left_branch:EQUALS]-(a:Assignment)-[:NOT_EQUALS]->(right:Assignment) ";
-        query = query + "RETURN count(a) AS bt_left_branches";
+        String query = "MATCH (:Assignment)<-[:EQUALS]-(a:Assignment)-[:NOT_EQUALS]->(:Assignment) ";
+        query = query + "RETURN count(a) AS bt_assignments";
         
         Transaction tx = graphDb.beginTx();
         
@@ -61,7 +60,7 @@ public class SearchTree {
             Result result = graphDb.execute(query);
             tx.success();
             
-            return (long) result.next().get("bt_left_branches");
+            return (long) result.next().get("bt_assignments");
         } finally {
             tx.close();
         }
@@ -69,17 +68,16 @@ public class SearchTree {
     
     double getAvgLength(){
         // The average length of left branches where the assignment also eventually right branched
-        String query = "MATCH (:Assignment)<-[left_branch:EQUALS]-(a:Assignment)-[:NOT_EQUALS]->(right:Assignment) ";
-        query = query + "WITH left_branch.length AS left_branch_assignments ";
-        query = query + "RETURN avg(left_branch_assignments)";
+        String query = "MATCH (:Assignment)<-[left_branch:EQUALS]-(a:Assignment)-[:NOT_EQUALS]->(:Assignment) ";
+        query = query + "RETURN avg(left_branch.length) AS average_length";
         
         Transaction tx = graphDb.beginTx();
         
         try {
             Result result = graphDb.execute(query);
+            tx.success();
             
-            tx.success();            
-            return (double) result.next().get("avg(left_branch_assignments)");
+            return (double) result.next().get("average_length");
         } finally {
             tx.close();
         }
@@ -100,8 +98,8 @@ public class SearchTree {
         
         try {
             Result result = graphDb.execute(query);
+            tx.success();
             
-            tx.success();            
             return (long) result.next().get("count(left_branch_assignments)");
         } finally {
             tx.close();
@@ -110,7 +108,7 @@ public class SearchTree {
     
     double getPropScore(){
         // The ratio of backtracked assignments to the total number of assignments made
-        String query = "MATCH (:Assignment)<-[left_branch:EQUALS]-(a:Assignment)-[:NOT_EQUALS]->(:Assignment) ";
+        String query = "MATCH (:Assignment)<-[:EQUALS]-(a:Assignment)-[:NOT_EQUALS]->(:Assignment) ";
         query = query + "WITH count(a) AS bt_assignments_count ";
         query = query + "MATCH (all_assignments:Assignment) ";
         query = query + "RETURN toFloat(bt_assignments_count) / toFloat(count(all_assignments)) AS score";
@@ -119,8 +117,8 @@ public class SearchTree {
         
         try {
             Result result = graphDb.execute(query);
+            tx.success();
             
-            tx.success();            
             return (double) result.next().get("score");
         } finally {
             tx.close();
@@ -138,8 +136,8 @@ public class SearchTree {
         
         try {
             Result result = graphDb.execute(query);
+            tx.success();
             
-            tx.success();            
             return (double) result.next().get("ratio");
         } finally {
             tx.close();
@@ -148,18 +146,18 @@ public class SearchTree {
     
     double getLongestBranch(){
         // Get the longest left branch where the assignment also eventually right branched
-        String query = "MATCH (:Assignment)<-[left_branch:EQUALS]-(a:Assignment)-[:NOT_EQUALS]->(right:Assignment) ";
-        query = query + "RETURN left_branch.length AS left_branch_assignments ";
-        query = query + "ORDER BY left_branch_assignments DESC ";
+        String query = "MATCH (:Assignment)<-[left_branch:EQUALS]-(a:Assignment)-[:NOT_EQUALS]->(:Assignment) ";
+        query = query + "RETURN left_branch.length AS longest_branch ";
+        query = query + "ORDER BY left_branch.length DESC ";
         query = query + "LIMIT 1";
         
         Transaction tx = graphDb.beginTx();
         
         try {
             Result result = graphDb.execute(query);
+            tx.success();
             
-            tx.success();            
-            return (double) result.next().get("left_branch_assignments");
+            return (double) result.next().get("longest_branch");
         } finally {
             tx.close();
         }
@@ -194,6 +192,7 @@ public class SearchTree {
             
             if (result.hasNext()){
                 tx.success();
+                
                 return (int) result.next().get("path_length");
             }
         } finally {
