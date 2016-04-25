@@ -49,6 +49,66 @@ public class SearchTree {
         }
     }
     
+    long getNumOfAssignments(){
+        String query = "MATCH (a:Assignment) RETURN count(a)";
+        
+        Transaction tx = graphDb.beginTx();
+        
+        try {
+            Result result = graphDb.execute(query);
+            tx.success();
+            
+            return (long) result.next().get("count(a)");
+        } finally {
+            tx.close();
+        }
+    }
+    
+    long getNumOfSolutions(){
+        String query = "MATCH (sol:Solution) RETURN count(sol)";
+        
+        Transaction tx = graphDb.beginTx();
+        
+        try {
+            Result result = graphDb.execute(query);
+            tx.success();
+            
+            return (long) result.next().get("count(sol)");
+        } finally {
+            tx.close();
+        }
+    }
+    
+    long getNumOfDeadEnds(){
+        String query = "MATCH (de:DeadEnd) RETURN count(de)";
+        
+        Transaction tx = graphDb.beginTx();
+        
+        try {
+            Result result = graphDb.execute(query);
+            tx.success();
+            
+            return (long) result.next().get("count(de)");
+        } finally {
+            tx.close();
+        }
+    }
+    
+    long getNumOfBacktracks(){
+        String query = "MATCH ()-[bt:BACKTRACK]->() RETURN count(bt)";
+        
+        Transaction tx = graphDb.beginTx();
+        
+        try {
+            Result result = graphDb.execute(query);
+            tx.success();
+            
+            return (long) result.next().get("count(bt)");
+        } finally {
+            tx.close();
+        }
+    }
+    
     long getBtLeftBranches(){
         // The number of assignments that have left branches that were eventually right branched to a valid assignment
         String query = "MATCH (:Assignment)<-[:EQUALS]-(a:Assignment)-[:NOT_EQUALS]->(:Assignment) ";

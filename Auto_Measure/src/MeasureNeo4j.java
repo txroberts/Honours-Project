@@ -57,11 +57,17 @@ public class MeasureNeo4j {
 
                     SearchTree tree = new SearchTree(db_path);
 
+                    long num_assignments = tree.getNumOfAssignments();
+                    long num_solutions = tree.getNumOfSolutions();
+                    long num_dead_ends = tree.getNumOfDeadEnds();
+                    long num_backtracks = tree.getNumOfBacktracks();
+                    
                     long bt_left_branches = tree.getBtLeftBranches();
                     double avg_length = tree.getAvgLength();
-                    long num_outlier_branches = tree.getNumOutlierBranches();
-                    double prop_score = tree.getPropScore();
-                    double de_ratio = tree.getDEARatio();
+                    //long num_outlier_branches = tree.getNumOutlierBranches();
+                    //double prop_score = tree.getPropScore();
+                    //double de_ratio = tree.getDEARatio();
+                    
                     double longest_branch = tree.getLongestBranch();
                     int longest_good_chain = tree.getLongestEqualsChain();
                     
@@ -74,11 +80,17 @@ public class MeasureNeo4j {
                         FileWriter fileWriter = new FileWriter(output_data_csv, true);
                         
                         PrintWriter printWriter = new PrintWriter(fileWriter);
-                        printWriter.printf("%s,%s,%d%n", problemDetails, "Number of Backtracked Left Branches", bt_left_branches);
-                        printWriter.printf("%s,%s,%f%n", problemDetails, "Average Left Branch Length", avg_length);
-                        printWriter.printf("%s,%s,%d%n", problemDetails, "Number of Outlier Left Branches", num_outlier_branches);
-                        printWriter.printf("%s,%s,%f%n", problemDetails, "Normalised Constraint Propagation Score", prop_score);
-                        printWriter.printf("%s,%s,%f%n", problemDetails, "Dead Ends/Assignments Ratio", de_ratio);
+                        printWriter.printf("%s,%s,%d%n", problemDetails, "Assignments", num_assignments);
+                        printWriter.printf("%s,%s,%d%n", problemDetails, "Solutions", num_solutions);
+                        printWriter.printf("%s,%s,%d%n", problemDetails, "Dead Ends", num_dead_ends);
+                        printWriter.printf("%s,%s,%d%n", problemDetails, "Backtracks", num_backtracks);
+                        
+                        printWriter.printf("%s,%s,%d%n", problemDetails, "Backtracked left branches", bt_left_branches);
+                        printWriter.printf("%s,%s,%f%n", problemDetails, "Average left branch length", avg_length);
+                        //printWriter.printf("%s,%s,%d%n", problemDetails, "Number of Outlier Left Branches", num_outlier_branches);
+                        //printWriter.printf("%s,%s,%f%n", problemDetails, "Normalised Constraint Propagation Score", prop_score);
+                        //printWriter.printf("%s,%s,%f%n", problemDetails, "Dead Ends/Assignments Ratio", de_ratio);
+                        
                         printWriter.printf("%s,%s,%f%n", problemDetails, "Longest backtracked left branch", longest_branch);
                         printWriter.printf("%s,%s,%d%n", problemDetails, "Longest chain of successful assignments", longest_good_chain);
 
