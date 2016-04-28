@@ -1,0 +1,811 @@
+Problem,Variable Ordering,Pre-processing,Measure,Data
+puget10,ldf,GAC,Assignments,596
+puget10,ldf,GAC,Solutions,1
+puget10,ldf,GAC,Dead Ends,529
+puget10,ldf,GAC,Backtracks,1040
+puget10,ldf,GAC,Backtracked left branches,120
+puget10,ldf,GAC,Average left branch length,15.275000
+puget10,ldf,GAC,Longest backtracked left branch,181.000000
+puget10,ldf,GAC,Longest chain of successful assignments,12
+puget10,ldf,GAC,First ten assignments backtracked,6
+puget10,ldf,None,Assignments,596
+puget10,ldf,None,Solutions,1
+puget10,ldf,None,Dead Ends,529
+puget10,ldf,None,Backtracks,1040
+puget10,ldf,None,Backtracked left branches,120
+puget10,ldf,None,Average left branch length,15.275000
+puget10,ldf,None,Longest backtracked left branch,181.000000
+puget10,ldf,None,Longest chain of successful assignments,12
+puget10,ldf,None,First ten assignments backtracked,6
+puget10,ldf,SAC,Assignments,593
+puget10,ldf,SAC,Solutions,1
+puget10,ldf,SAC,Dead Ends,529
+puget10,ldf,SAC,Backtracks,1040
+puget10,ldf,SAC,Backtracked left branches,120
+puget10,ldf,SAC,Average left branch length,15.275000
+puget10,ldf,SAC,Longest backtracked left branch,181.000000
+puget10,ldf,SAC,Longest chain of successful assignments,12
+puget10,ldf,SAC,First ten assignments backtracked,6
+puget10,ldf,SACBounds,Assignments,593
+puget10,ldf,SACBounds,Solutions,1
+puget10,ldf,SACBounds,Dead Ends,529
+puget10,ldf,SACBounds,Backtracks,1040
+puget10,ldf,SACBounds,Backtracked left branches,120
+puget10,ldf,SACBounds,Average left branch length,15.275000
+puget10,ldf,SACBounds,Longest backtracked left branch,181.000000
+puget10,ldf,SACBounds,Longest chain of successful assignments,12
+puget10,ldf,SACBounds,First ten assignments backtracked,6
+puget10,ldf,SSAC,Assignments,582
+puget10,ldf,SSAC,Solutions,1
+puget10,ldf,SSAC,Dead Ends,519
+puget10,ldf,SSAC,Backtracks,1021
+puget10,ldf,SSAC,Backtracked left branches,117
+puget10,ldf,SSAC,Average left branch length,15.564103
+puget10,ldf,SSAC,Longest backtracked left branch,181.000000
+puget10,ldf,SSAC,Longest chain of successful assignments,12
+puget10,ldf,SSAC,First ten assignments backtracked,3
+puget10,ldf,SSACBounds,Assignments,582
+puget10,ldf,SSACBounds,Solutions,1
+puget10,ldf,SSACBounds,Dead Ends,519
+puget10,ldf,SSACBounds,Backtracks,1021
+puget10,ldf,SSACBounds,Backtracked left branches,117
+puget10,ldf,SSACBounds,Average left branch length,15.564103
+puget10,ldf,SSACBounds,Longest backtracked left branch,181.000000
+puget10,ldf,SSACBounds,Longest chain of successful assignments,12
+puget10,ldf,SSACBounds,First ten assignments backtracked,3
+puget10,None,GAC,Assignments,596
+puget10,None,GAC,Solutions,1
+puget10,None,GAC,Dead Ends,529
+puget10,None,GAC,Backtracks,1040
+puget10,None,GAC,Backtracked left branches,120
+puget10,None,GAC,Average left branch length,15.275000
+puget10,None,GAC,Longest backtracked left branch,181.000000
+puget10,None,GAC,Longest chain of successful assignments,12
+puget10,None,GAC,First ten assignments backtracked,6
+puget10,None,None,Assignments,596
+puget10,None,None,Solutions,1
+puget10,None,None,Dead Ends,529
+puget10,None,None,Backtracks,1040
+puget10,None,None,Backtracked left branches,120
+puget10,None,None,Average left branch length,15.275000
+puget10,None,None,Longest backtracked left branch,181.000000
+puget10,None,None,Longest chain of successful assignments,12
+puget10,None,None,First ten assignments backtracked,6
+puget10,None,SAC,Assignments,593
+puget10,None,SAC,Solutions,1
+puget10,None,SAC,Dead Ends,529
+puget10,None,SAC,Backtracks,1040
+puget10,None,SAC,Backtracked left branches,120
+puget10,None,SAC,Average left branch length,15.275000
+puget10,None,SAC,Longest backtracked left branch,181.000000
+puget10,None,SAC,Longest chain of successful assignments,12
+puget10,None,SAC,First ten assignments backtracked,6
+puget10,None,SACBounds,Assignments,593
+puget10,None,SACBounds,Solutions,1
+puget10,None,SACBounds,Dead Ends,529
+puget10,None,SACBounds,Backtracks,1040
+puget10,None,SACBounds,Backtracked left branches,120
+puget10,None,SACBounds,Average left branch length,15.275000
+puget10,None,SACBounds,Longest backtracked left branch,181.000000
+puget10,None,SACBounds,Longest chain of successful assignments,12
+puget10,None,SACBounds,First ten assignments backtracked,6
+puget10,None,SSAC,Assignments,582
+puget10,None,SSAC,Solutions,1
+puget10,None,SSAC,Dead Ends,519
+puget10,None,SSAC,Backtracks,1021
+puget10,None,SSAC,Backtracked left branches,117
+puget10,None,SSAC,Average left branch length,15.564103
+puget10,None,SSAC,Longest backtracked left branch,181.000000
+puget10,None,SSAC,Longest chain of successful assignments,12
+puget10,None,SSAC,First ten assignments backtracked,3
+puget10,None,SSACBounds,Assignments,582
+puget10,None,SSACBounds,Solutions,1
+puget10,None,SSACBounds,Dead Ends,519
+puget10,None,SSACBounds,Backtracks,1021
+puget10,None,SSACBounds,Backtracked left branches,117
+puget10,None,SSACBounds,Average left branch length,15.564103
+puget10,None,SSACBounds,Longest backtracked left branch,181.000000
+puget10,None,SSACBounds,Longest chain of successful assignments,12
+puget10,None,SSACBounds,First ten assignments backtracked,3
+puget10,sdf,GAC,Assignments,596
+puget10,sdf,GAC,Solutions,1
+puget10,sdf,GAC,Dead Ends,529
+puget10,sdf,GAC,Backtracks,1040
+puget10,sdf,GAC,Backtracked left branches,120
+puget10,sdf,GAC,Average left branch length,15.275000
+puget10,sdf,GAC,Longest backtracked left branch,181.000000
+puget10,sdf,GAC,Longest chain of successful assignments,12
+puget10,sdf,GAC,First ten assignments backtracked,6
+puget10,sdf,None,Assignments,596
+puget10,sdf,None,Solutions,1
+puget10,sdf,None,Dead Ends,529
+puget10,sdf,None,Backtracks,1040
+puget10,sdf,None,Backtracked left branches,120
+puget10,sdf,None,Average left branch length,15.275000
+puget10,sdf,None,Longest backtracked left branch,181.000000
+puget10,sdf,None,Longest chain of successful assignments,12
+puget10,sdf,None,First ten assignments backtracked,6
+puget10,sdf,SAC,Assignments,593
+puget10,sdf,SAC,Solutions,1
+puget10,sdf,SAC,Dead Ends,529
+puget10,sdf,SAC,Backtracks,1040
+puget10,sdf,SAC,Backtracked left branches,120
+puget10,sdf,SAC,Average left branch length,15.275000
+puget10,sdf,SAC,Longest backtracked left branch,181.000000
+puget10,sdf,SAC,Longest chain of successful assignments,12
+puget10,sdf,SAC,First ten assignments backtracked,6
+puget10,sdf,SACBounds,Assignments,593
+puget10,sdf,SACBounds,Solutions,1
+puget10,sdf,SACBounds,Dead Ends,529
+puget10,sdf,SACBounds,Backtracks,1040
+puget10,sdf,SACBounds,Backtracked left branches,120
+puget10,sdf,SACBounds,Average left branch length,15.275000
+puget10,sdf,SACBounds,Longest backtracked left branch,181.000000
+puget10,sdf,SACBounds,Longest chain of successful assignments,12
+puget10,sdf,SACBounds,First ten assignments backtracked,6
+puget10,sdf,SSAC,Assignments,582
+puget10,sdf,SSAC,Solutions,1
+puget10,sdf,SSAC,Dead Ends,519
+puget10,sdf,SSAC,Backtracks,1021
+puget10,sdf,SSAC,Backtracked left branches,117
+puget10,sdf,SSAC,Average left branch length,15.564103
+puget10,sdf,SSAC,Longest backtracked left branch,181.000000
+puget10,sdf,SSAC,Longest chain of successful assignments,12
+puget10,sdf,SSAC,First ten assignments backtracked,3
+puget10,sdf,SSACBounds,Assignments,582
+puget10,sdf,SSACBounds,Solutions,1
+puget10,sdf,SSACBounds,Dead Ends,519
+puget10,sdf,SSACBounds,Backtracks,1021
+puget10,sdf,SSACBounds,Backtracked left branches,117
+puget10,sdf,SSACBounds,Average left branch length,15.564103
+puget10,sdf,SSACBounds,Longest backtracked left branch,181.000000
+puget10,sdf,SSACBounds,Longest chain of successful assignments,12
+puget10,sdf,SSACBounds,First ten assignments backtracked,3
+puget10,srf,GAC,Assignments,596
+puget10,srf,GAC,Solutions,1
+puget10,srf,GAC,Dead Ends,529
+puget10,srf,GAC,Backtracks,1040
+puget10,srf,GAC,Backtracked left branches,120
+puget10,srf,GAC,Average left branch length,15.275000
+puget10,srf,GAC,Longest backtracked left branch,181.000000
+puget10,srf,GAC,Longest chain of successful assignments,12
+puget10,srf,GAC,First ten assignments backtracked,6
+puget10,srf,None,Assignments,596
+puget10,srf,None,Solutions,1
+puget10,srf,None,Dead Ends,529
+puget10,srf,None,Backtracks,1040
+puget10,srf,None,Backtracked left branches,120
+puget10,srf,None,Average left branch length,15.275000
+puget10,srf,None,Longest backtracked left branch,181.000000
+puget10,srf,None,Longest chain of successful assignments,12
+puget10,srf,None,First ten assignments backtracked,6
+puget10,srf,SAC,Assignments,593
+puget10,srf,SAC,Solutions,1
+puget10,srf,SAC,Dead Ends,529
+puget10,srf,SAC,Backtracks,1040
+puget10,srf,SAC,Backtracked left branches,120
+puget10,srf,SAC,Average left branch length,15.275000
+puget10,srf,SAC,Longest backtracked left branch,181.000000
+puget10,srf,SAC,Longest chain of successful assignments,12
+puget10,srf,SAC,First ten assignments backtracked,6
+puget10,srf,SACBounds,Assignments,593
+puget10,srf,SACBounds,Solutions,1
+puget10,srf,SACBounds,Dead Ends,529
+puget10,srf,SACBounds,Backtracks,1040
+puget10,srf,SACBounds,Backtracked left branches,120
+puget10,srf,SACBounds,Average left branch length,15.275000
+puget10,srf,SACBounds,Longest backtracked left branch,181.000000
+puget10,srf,SACBounds,Longest chain of successful assignments,12
+puget10,srf,SACBounds,First ten assignments backtracked,6
+puget10,srf,SSAC,Assignments,582
+puget10,srf,SSAC,Solutions,1
+puget10,srf,SSAC,Dead Ends,519
+puget10,srf,SSAC,Backtracks,1021
+puget10,srf,SSAC,Backtracked left branches,117
+puget10,srf,SSAC,Average left branch length,15.564103
+puget10,srf,SSAC,Longest backtracked left branch,181.000000
+puget10,srf,SSAC,Longest chain of successful assignments,12
+puget10,srf,SSAC,First ten assignments backtracked,3
+puget10,srf,SSACBounds,Assignments,582
+puget10,srf,SSACBounds,Solutions,1
+puget10,srf,SSACBounds,Dead Ends,519
+puget10,srf,SSACBounds,Backtracks,1021
+puget10,srf,SSACBounds,Backtracked left branches,117
+puget10,srf,SSACBounds,Average left branch length,15.564103
+puget10,srf,SSACBounds,Longest backtracked left branch,181.000000
+puget10,srf,SSACBounds,Longest chain of successful assignments,12
+puget10,srf,SSACBounds,First ten assignments backtracked,3
+puget10,static,GAC,Assignments,596
+puget10,static,GAC,Solutions,1
+puget10,static,GAC,Dead Ends,529
+puget10,static,GAC,Backtracks,1040
+puget10,static,GAC,Backtracked left branches,120
+puget10,static,GAC,Average left branch length,15.275000
+puget10,static,GAC,Longest backtracked left branch,181.000000
+puget10,static,GAC,Longest chain of successful assignments,12
+puget10,static,GAC,First ten assignments backtracked,6
+puget10,static,None,Assignments,596
+puget10,static,None,Solutions,1
+puget10,static,None,Dead Ends,529
+puget10,static,None,Backtracks,1040
+puget10,static,None,Backtracked left branches,120
+puget10,static,None,Average left branch length,15.275000
+puget10,static,None,Longest backtracked left branch,181.000000
+puget10,static,None,Longest chain of successful assignments,12
+puget10,static,None,First ten assignments backtracked,6
+puget10,static,SAC,Assignments,593
+puget10,static,SAC,Solutions,1
+puget10,static,SAC,Dead Ends,529
+puget10,static,SAC,Backtracks,1040
+puget10,static,SAC,Backtracked left branches,120
+puget10,static,SAC,Average left branch length,15.275000
+puget10,static,SAC,Longest backtracked left branch,181.000000
+puget10,static,SAC,Longest chain of successful assignments,12
+puget10,static,SAC,First ten assignments backtracked,6
+puget10,static,SACBounds,Assignments,593
+puget10,static,SACBounds,Solutions,1
+puget10,static,SACBounds,Dead Ends,529
+puget10,static,SACBounds,Backtracks,1040
+puget10,static,SACBounds,Backtracked left branches,120
+puget10,static,SACBounds,Average left branch length,15.275000
+puget10,static,SACBounds,Longest backtracked left branch,181.000000
+puget10,static,SACBounds,Longest chain of successful assignments,12
+puget10,static,SACBounds,First ten assignments backtracked,6
+puget10,static,SSAC,Assignments,582
+puget10,static,SSAC,Solutions,1
+puget10,static,SSAC,Dead Ends,519
+puget10,static,SSAC,Backtracks,1021
+puget10,static,SSAC,Backtracked left branches,117
+puget10,static,SSAC,Average left branch length,15.564103
+puget10,static,SSAC,Longest backtracked left branch,181.000000
+puget10,static,SSAC,Longest chain of successful assignments,12
+puget10,static,SSAC,First ten assignments backtracked,3
+puget10,static,SSACBounds,Assignments,582
+puget10,static,SSACBounds,Solutions,1
+puget10,static,SSACBounds,Dead Ends,519
+puget10,static,SSACBounds,Backtracks,1021
+puget10,static,SSACBounds,Backtracked left branches,117
+puget10,static,SSACBounds,Average left branch length,15.564103
+puget10,static,SSACBounds,Longest backtracked left branch,181.000000
+puget10,static,SSACBounds,Longest chain of successful assignments,12
+puget10,static,SSACBounds,First ten assignments backtracked,3
+puget2,ldf,GAC,Assignments,475
+puget2,ldf,GAC,Solutions,1
+puget2,ldf,GAC,Dead Ends,427
+puget2,ldf,GAC,Backtracks,851
+puget2,ldf,GAC,Backtracked left branches,101
+puget2,ldf,GAC,Average left branch length,17.594059
+puget2,ldf,GAC,Longest backtracked left branch,173.000000
+puget2,ldf,GAC,Longest chain of successful assignments,29
+puget2,ldf,GAC,First ten assignments backtracked,1
+puget2,ldf,None,Assignments,475
+puget2,ldf,None,Solutions,1
+puget2,ldf,None,Dead Ends,427
+puget2,ldf,None,Backtracks,851
+puget2,ldf,None,Backtracked left branches,101
+puget2,ldf,None,Average left branch length,17.594059
+puget2,ldf,None,Longest backtracked left branch,173.000000
+puget2,ldf,None,Longest chain of successful assignments,29
+puget2,ldf,None,First ten assignments backtracked,1
+puget2,ldf,SAC,Assignments,475
+puget2,ldf,SAC,Solutions,1
+puget2,ldf,SAC,Dead Ends,427
+puget2,ldf,SAC,Backtracks,851
+puget2,ldf,SAC,Backtracked left branches,101
+puget2,ldf,SAC,Average left branch length,17.594059
+puget2,ldf,SAC,Longest backtracked left branch,173.000000
+puget2,ldf,SAC,Longest chain of successful assignments,29
+puget2,ldf,SAC,First ten assignments backtracked,1
+puget2,ldf,SACBounds,Assignments,475
+puget2,ldf,SACBounds,Solutions,1
+puget2,ldf,SACBounds,Dead Ends,427
+puget2,ldf,SACBounds,Backtracks,851
+puget2,ldf,SACBounds,Backtracked left branches,101
+puget2,ldf,SACBounds,Average left branch length,17.594059
+puget2,ldf,SACBounds,Longest backtracked left branch,173.000000
+puget2,ldf,SACBounds,Longest chain of successful assignments,29
+puget2,ldf,SACBounds,First ten assignments backtracked,1
+puget2,ldf,SSAC,Assignments,314
+puget2,ldf,SSAC,Solutions,1
+puget2,ldf,SSAC,Dead Ends,266
+puget2,ldf,SSAC,Backtracks,530
+puget2,ldf,SSAC,Backtracked left branches,59
+puget2,ldf,SSAC,Average left branch length,19.796610
+puget2,ldf,SSAC,Longest backtracked left branch,173.000000
+puget2,ldf,SSAC,Longest chain of successful assignments,29
+puget2,ldf,SSAC,First ten assignments backtracked,1
+puget2,ldf,SSACBounds,Assignments,314
+puget2,ldf,SSACBounds,Solutions,1
+puget2,ldf,SSACBounds,Dead Ends,266
+puget2,ldf,SSACBounds,Backtracks,530
+puget2,ldf,SSACBounds,Backtracked left branches,59
+puget2,ldf,SSACBounds,Average left branch length,19.796610
+puget2,ldf,SSACBounds,Longest backtracked left branch,173.000000
+puget2,ldf,SSACBounds,Longest chain of successful assignments,29
+puget2,ldf,SSACBounds,First ten assignments backtracked,1
+puget2,None,GAC,Assignments,475
+puget2,None,GAC,Solutions,1
+puget2,None,GAC,Dead Ends,427
+puget2,None,GAC,Backtracks,851
+puget2,None,GAC,Backtracked left branches,101
+puget2,None,GAC,Average left branch length,17.594059
+puget2,None,GAC,Longest backtracked left branch,173.000000
+puget2,None,GAC,Longest chain of successful assignments,29
+puget2,None,GAC,First ten assignments backtracked,1
+puget2,None,None,Assignments,475
+puget2,None,None,Solutions,1
+puget2,None,None,Dead Ends,427
+puget2,None,None,Backtracks,851
+puget2,None,None,Backtracked left branches,101
+puget2,None,None,Average left branch length,17.594059
+puget2,None,None,Longest backtracked left branch,173.000000
+puget2,None,None,Longest chain of successful assignments,29
+puget2,None,None,First ten assignments backtracked,1
+puget2,None,SAC,Assignments,475
+puget2,None,SAC,Solutions,1
+puget2,None,SAC,Dead Ends,427
+puget2,None,SAC,Backtracks,851
+puget2,None,SAC,Backtracked left branches,101
+puget2,None,SAC,Average left branch length,17.594059
+puget2,None,SAC,Longest backtracked left branch,173.000000
+puget2,None,SAC,Longest chain of successful assignments,29
+puget2,None,SAC,First ten assignments backtracked,1
+puget2,None,SACBounds,Assignments,475
+puget2,None,SACBounds,Solutions,1
+puget2,None,SACBounds,Dead Ends,427
+puget2,None,SACBounds,Backtracks,851
+puget2,None,SACBounds,Backtracked left branches,101
+puget2,None,SACBounds,Average left branch length,17.594059
+puget2,None,SACBounds,Longest backtracked left branch,173.000000
+puget2,None,SACBounds,Longest chain of successful assignments,29
+puget2,None,SACBounds,First ten assignments backtracked,1
+puget2,None,SSAC,Assignments,314
+puget2,None,SSAC,Solutions,1
+puget2,None,SSAC,Dead Ends,266
+puget2,None,SSAC,Backtracks,530
+puget2,None,SSAC,Backtracked left branches,59
+puget2,None,SSAC,Average left branch length,19.796610
+puget2,None,SSAC,Longest backtracked left branch,173.000000
+puget2,None,SSAC,Longest chain of successful assignments,29
+puget2,None,SSAC,First ten assignments backtracked,1
+puget2,None,SSACBounds,Assignments,314
+puget2,None,SSACBounds,Solutions,1
+puget2,None,SSACBounds,Dead Ends,266
+puget2,None,SSACBounds,Backtracks,530
+puget2,None,SSACBounds,Backtracked left branches,59
+puget2,None,SSACBounds,Average left branch length,19.796610
+puget2,None,SSACBounds,Longest backtracked left branch,173.000000
+puget2,None,SSACBounds,Longest chain of successful assignments,29
+puget2,None,SSACBounds,First ten assignments backtracked,1
+puget2,sdf,GAC,Assignments,475
+puget2,sdf,GAC,Solutions,1
+puget2,sdf,GAC,Dead Ends,427
+puget2,sdf,GAC,Backtracks,851
+puget2,sdf,GAC,Backtracked left branches,101
+puget2,sdf,GAC,Average left branch length,17.594059
+puget2,sdf,GAC,Longest backtracked left branch,173.000000
+puget2,sdf,GAC,Longest chain of successful assignments,29
+puget2,sdf,GAC,First ten assignments backtracked,1
+puget2,sdf,None,Assignments,475
+puget2,sdf,None,Solutions,1
+puget2,sdf,None,Dead Ends,427
+puget2,sdf,None,Backtracks,851
+puget2,sdf,None,Backtracked left branches,101
+puget2,sdf,None,Average left branch length,17.594059
+puget2,sdf,None,Longest backtracked left branch,173.000000
+puget2,sdf,None,Longest chain of successful assignments,29
+puget2,sdf,None,First ten assignments backtracked,1
+puget2,sdf,SAC,Assignments,475
+puget2,sdf,SAC,Solutions,1
+puget2,sdf,SAC,Dead Ends,427
+puget2,sdf,SAC,Backtracks,851
+puget2,sdf,SAC,Backtracked left branches,101
+puget2,sdf,SAC,Average left branch length,17.594059
+puget2,sdf,SAC,Longest backtracked left branch,173.000000
+puget2,sdf,SAC,Longest chain of successful assignments,29
+puget2,sdf,SAC,First ten assignments backtracked,1
+puget2,sdf,SACBounds,Assignments,475
+puget2,sdf,SACBounds,Solutions,1
+puget2,sdf,SACBounds,Dead Ends,427
+puget2,sdf,SACBounds,Backtracks,851
+puget2,sdf,SACBounds,Backtracked left branches,101
+puget2,sdf,SACBounds,Average left branch length,17.594059
+puget2,sdf,SACBounds,Longest backtracked left branch,173.000000
+puget2,sdf,SACBounds,Longest chain of successful assignments,29
+puget2,sdf,SACBounds,First ten assignments backtracked,1
+puget2,sdf,SSAC,Assignments,314
+puget2,sdf,SSAC,Solutions,1
+puget2,sdf,SSAC,Dead Ends,266
+puget2,sdf,SSAC,Backtracks,530
+puget2,sdf,SSAC,Backtracked left branches,59
+puget2,sdf,SSAC,Average left branch length,19.796610
+puget2,sdf,SSAC,Longest backtracked left branch,173.000000
+puget2,sdf,SSAC,Longest chain of successful assignments,29
+puget2,sdf,SSAC,First ten assignments backtracked,1
+puget2,sdf,SSACBounds,Assignments,314
+puget2,sdf,SSACBounds,Solutions,1
+puget2,sdf,SSACBounds,Dead Ends,266
+puget2,sdf,SSACBounds,Backtracks,530
+puget2,sdf,SSACBounds,Backtracked left branches,59
+puget2,sdf,SSACBounds,Average left branch length,19.796610
+puget2,sdf,SSACBounds,Longest backtracked left branch,173.000000
+puget2,sdf,SSACBounds,Longest chain of successful assignments,29
+puget2,sdf,SSACBounds,First ten assignments backtracked,1
+puget2,srf,GAC,Assignments,475
+puget2,srf,GAC,Solutions,1
+puget2,srf,GAC,Dead Ends,427
+puget2,srf,GAC,Backtracks,851
+puget2,srf,GAC,Backtracked left branches,101
+puget2,srf,GAC,Average left branch length,17.594059
+puget2,srf,GAC,Longest backtracked left branch,173.000000
+puget2,srf,GAC,Longest chain of successful assignments,29
+puget2,srf,GAC,First ten assignments backtracked,1
+puget2,srf,None,Assignments,475
+puget2,srf,None,Solutions,1
+puget2,srf,None,Dead Ends,427
+puget2,srf,None,Backtracks,851
+puget2,srf,None,Backtracked left branches,101
+puget2,srf,None,Average left branch length,17.594059
+puget2,srf,None,Longest backtracked left branch,173.000000
+puget2,srf,None,Longest chain of successful assignments,29
+puget2,srf,None,First ten assignments backtracked,1
+puget2,srf,SAC,Assignments,475
+puget2,srf,SAC,Solutions,1
+puget2,srf,SAC,Dead Ends,427
+puget2,srf,SAC,Backtracks,851
+puget2,srf,SAC,Backtracked left branches,101
+puget2,srf,SAC,Average left branch length,17.594059
+puget2,srf,SAC,Longest backtracked left branch,173.000000
+puget2,srf,SAC,Longest chain of successful assignments,29
+puget2,srf,SAC,First ten assignments backtracked,1
+puget2,srf,SACBounds,Assignments,475
+puget2,srf,SACBounds,Solutions,1
+puget2,srf,SACBounds,Dead Ends,427
+puget2,srf,SACBounds,Backtracks,851
+puget2,srf,SACBounds,Backtracked left branches,101
+puget2,srf,SACBounds,Average left branch length,17.594059
+puget2,srf,SACBounds,Longest backtracked left branch,173.000000
+puget2,srf,SACBounds,Longest chain of successful assignments,29
+puget2,srf,SACBounds,First ten assignments backtracked,1
+puget2,srf,SSAC,Assignments,314
+puget2,srf,SSAC,Solutions,1
+puget2,srf,SSAC,Dead Ends,266
+puget2,srf,SSAC,Backtracks,530
+puget2,srf,SSAC,Backtracked left branches,59
+puget2,srf,SSAC,Average left branch length,19.796610
+puget2,srf,SSAC,Longest backtracked left branch,173.000000
+puget2,srf,SSAC,Longest chain of successful assignments,29
+puget2,srf,SSAC,First ten assignments backtracked,1
+puget2,srf,SSACBounds,Assignments,314
+puget2,srf,SSACBounds,Solutions,1
+puget2,srf,SSACBounds,Dead Ends,266
+puget2,srf,SSACBounds,Backtracks,530
+puget2,srf,SSACBounds,Backtracked left branches,59
+puget2,srf,SSACBounds,Average left branch length,19.796610
+puget2,srf,SSACBounds,Longest backtracked left branch,173.000000
+puget2,srf,SSACBounds,Longest chain of successful assignments,29
+puget2,srf,SSACBounds,First ten assignments backtracked,1
+puget2,static,GAC,Assignments,475
+puget2,static,GAC,Solutions,1
+puget2,static,GAC,Dead Ends,427
+puget2,static,GAC,Backtracks,851
+puget2,static,GAC,Backtracked left branches,101
+puget2,static,GAC,Average left branch length,17.594059
+puget2,static,GAC,Longest backtracked left branch,173.000000
+puget2,static,GAC,Longest chain of successful assignments,29
+puget2,static,GAC,First ten assignments backtracked,1
+puget2,static,None,Assignments,475
+puget2,static,None,Solutions,1
+puget2,static,None,Dead Ends,427
+puget2,static,None,Backtracks,851
+puget2,static,None,Backtracked left branches,101
+puget2,static,None,Average left branch length,17.594059
+puget2,static,None,Longest backtracked left branch,173.000000
+puget2,static,None,Longest chain of successful assignments,29
+puget2,static,None,First ten assignments backtracked,1
+puget2,static,SAC,Assignments,475
+puget2,static,SAC,Solutions,1
+puget2,static,SAC,Dead Ends,427
+puget2,static,SAC,Backtracks,851
+puget2,static,SAC,Backtracked left branches,101
+puget2,static,SAC,Average left branch length,17.594059
+puget2,static,SAC,Longest backtracked left branch,173.000000
+puget2,static,SAC,Longest chain of successful assignments,29
+puget2,static,SAC,First ten assignments backtracked,1
+puget2,static,SACBounds,Assignments,475
+puget2,static,SACBounds,Solutions,1
+puget2,static,SACBounds,Dead Ends,427
+puget2,static,SACBounds,Backtracks,851
+puget2,static,SACBounds,Backtracked left branches,101
+puget2,static,SACBounds,Average left branch length,17.594059
+puget2,static,SACBounds,Longest backtracked left branch,173.000000
+puget2,static,SACBounds,Longest chain of successful assignments,29
+puget2,static,SACBounds,First ten assignments backtracked,1
+puget2,static,SSAC,Assignments,314
+puget2,static,SSAC,Solutions,1
+puget2,static,SSAC,Dead Ends,266
+puget2,static,SSAC,Backtracks,530
+puget2,static,SSAC,Backtracked left branches,59
+puget2,static,SSAC,Average left branch length,19.796610
+puget2,static,SSAC,Longest backtracked left branch,173.000000
+puget2,static,SSAC,Longest chain of successful assignments,29
+puget2,static,SSAC,First ten assignments backtracked,1
+puget2,static,SSACBounds,Assignments,314
+puget2,static,SSACBounds,Solutions,1
+puget2,static,SSACBounds,Dead Ends,266
+puget2,static,SSACBounds,Backtracks,530
+puget2,static,SSACBounds,Backtracked left branches,59
+puget2,static,SSACBounds,Average left branch length,19.796610
+puget2,static,SSACBounds,Longest backtracked left branch,173.000000
+puget2,static,SSACBounds,Longest chain of successful assignments,29
+puget2,static,SSACBounds,First ten assignments backtracked,1
+puget6,ldf,GAC,Assignments,549
+puget6,ldf,GAC,Solutions,1
+puget6,ldf,GAC,Dead Ends,492
+puget6,ldf,GAC,Backtracks,963
+puget6,ldf,GAC,Backtracked left branches,122
+puget6,ldf,GAC,Average left branch length,15.959016
+puget6,ldf,GAC,Longest backtracked left branch,166.000000
+puget6,ldf,GAC,Longest chain of successful assignments,6
+puget6,ldf,GAC,First ten assignments backtracked,5
+puget6,ldf,None,Assignments,549
+puget6,ldf,None,Solutions,1
+puget6,ldf,None,Dead Ends,492
+puget6,ldf,None,Backtracks,963
+puget6,ldf,None,Backtracked left branches,122
+puget6,ldf,None,Average left branch length,15.959016
+puget6,ldf,None,Longest backtracked left branch,166.000000
+puget6,ldf,None,Longest chain of successful assignments,6
+puget6,ldf,None,First ten assignments backtracked,5
+puget6,ldf,SAC,Assignments,549
+puget6,ldf,SAC,Solutions,1
+puget6,ldf,SAC,Dead Ends,492
+puget6,ldf,SAC,Backtracks,963
+puget6,ldf,SAC,Backtracked left branches,122
+puget6,ldf,SAC,Average left branch length,15.959016
+puget6,ldf,SAC,Longest backtracked left branch,166.000000
+puget6,ldf,SAC,Longest chain of successful assignments,6
+puget6,ldf,SAC,First ten assignments backtracked,5
+puget6,ldf,SACBounds,Assignments,549
+puget6,ldf,SACBounds,Solutions,1
+puget6,ldf,SACBounds,Dead Ends,492
+puget6,ldf,SACBounds,Backtracks,963
+puget6,ldf,SACBounds,Backtracked left branches,122
+puget6,ldf,SACBounds,Average left branch length,15.959016
+puget6,ldf,SACBounds,Longest backtracked left branch,166.000000
+puget6,ldf,SACBounds,Longest chain of successful assignments,6
+puget6,ldf,SACBounds,First ten assignments backtracked,5
+puget6,ldf,SSAC,Assignments,546
+puget6,ldf,SSAC,Solutions,1
+puget6,ldf,SSAC,Dead Ends,490
+puget6,ldf,SSAC,Backtracks,960
+puget6,ldf,SSAC,Backtracked left branches,121
+puget6,ldf,SSAC,Average left branch length,16.082645
+puget6,ldf,SSAC,Longest backtracked left branch,166.000000
+puget6,ldf,SSAC,Longest chain of successful assignments,6
+puget6,ldf,SSAC,First ten assignments backtracked,4
+puget6,ldf,SSACBounds,Assignments,546
+puget6,ldf,SSACBounds,Solutions,1
+puget6,ldf,SSACBounds,Dead Ends,490
+puget6,ldf,SSACBounds,Backtracks,960
+puget6,ldf,SSACBounds,Backtracked left branches,121
+puget6,ldf,SSACBounds,Average left branch length,16.082645
+puget6,ldf,SSACBounds,Longest backtracked left branch,166.000000
+puget6,ldf,SSACBounds,Longest chain of successful assignments,6
+puget6,ldf,SSACBounds,First ten assignments backtracked,4
+puget6,None,GAC,Assignments,549
+puget6,None,GAC,Solutions,1
+puget6,None,GAC,Dead Ends,492
+puget6,None,GAC,Backtracks,963
+puget6,None,GAC,Backtracked left branches,122
+puget6,None,GAC,Average left branch length,15.959016
+puget6,None,GAC,Longest backtracked left branch,166.000000
+puget6,None,GAC,Longest chain of successful assignments,6
+puget6,None,GAC,First ten assignments backtracked,5
+puget6,None,None,Assignments,549
+puget6,None,None,Solutions,1
+puget6,None,None,Dead Ends,492
+puget6,None,None,Backtracks,963
+puget6,None,None,Backtracked left branches,122
+puget6,None,None,Average left branch length,15.959016
+puget6,None,None,Longest backtracked left branch,166.000000
+puget6,None,None,Longest chain of successful assignments,6
+puget6,None,None,First ten assignments backtracked,5
+puget6,None,SAC,Assignments,549
+puget6,None,SAC,Solutions,1
+puget6,None,SAC,Dead Ends,492
+puget6,None,SAC,Backtracks,963
+puget6,None,SAC,Backtracked left branches,122
+puget6,None,SAC,Average left branch length,15.959016
+puget6,None,SAC,Longest backtracked left branch,166.000000
+puget6,None,SAC,Longest chain of successful assignments,6
+puget6,None,SAC,First ten assignments backtracked,5
+puget6,None,SACBounds,Assignments,549
+puget6,None,SACBounds,Solutions,1
+puget6,None,SACBounds,Dead Ends,492
+puget6,None,SACBounds,Backtracks,963
+puget6,None,SACBounds,Backtracked left branches,122
+puget6,None,SACBounds,Average left branch length,15.959016
+puget6,None,SACBounds,Longest backtracked left branch,166.000000
+puget6,None,SACBounds,Longest chain of successful assignments,6
+puget6,None,SACBounds,First ten assignments backtracked,5
+puget6,None,SSAC,Assignments,546
+puget6,None,SSAC,Solutions,1
+puget6,None,SSAC,Dead Ends,490
+puget6,None,SSAC,Backtracks,960
+puget6,None,SSAC,Backtracked left branches,121
+puget6,None,SSAC,Average left branch length,16.082645
+puget6,None,SSAC,Longest backtracked left branch,166.000000
+puget6,None,SSAC,Longest chain of successful assignments,6
+puget6,None,SSAC,First ten assignments backtracked,4
+puget6,None,SSACBounds,Assignments,546
+puget6,None,SSACBounds,Solutions,1
+puget6,None,SSACBounds,Dead Ends,490
+puget6,None,SSACBounds,Backtracks,960
+puget6,None,SSACBounds,Backtracked left branches,121
+puget6,None,SSACBounds,Average left branch length,16.082645
+puget6,None,SSACBounds,Longest backtracked left branch,166.000000
+puget6,None,SSACBounds,Longest chain of successful assignments,6
+puget6,None,SSACBounds,First ten assignments backtracked,4
+puget6,sdf,GAC,Assignments,549
+puget6,sdf,GAC,Solutions,1
+puget6,sdf,GAC,Dead Ends,492
+puget6,sdf,GAC,Backtracks,963
+puget6,sdf,GAC,Backtracked left branches,122
+puget6,sdf,GAC,Average left branch length,15.959016
+puget6,sdf,GAC,Longest backtracked left branch,166.000000
+puget6,sdf,GAC,Longest chain of successful assignments,6
+puget6,sdf,GAC,First ten assignments backtracked,5
+puget6,sdf,None,Assignments,549
+puget6,sdf,None,Solutions,1
+puget6,sdf,None,Dead Ends,492
+puget6,sdf,None,Backtracks,963
+puget6,sdf,None,Backtracked left branches,122
+puget6,sdf,None,Average left branch length,15.959016
+puget6,sdf,None,Longest backtracked left branch,166.000000
+puget6,sdf,None,Longest chain of successful assignments,6
+puget6,sdf,None,First ten assignments backtracked,5
+puget6,sdf,SAC,Assignments,549
+puget6,sdf,SAC,Solutions,1
+puget6,sdf,SAC,Dead Ends,492
+puget6,sdf,SAC,Backtracks,963
+puget6,sdf,SAC,Backtracked left branches,122
+puget6,sdf,SAC,Average left branch length,15.959016
+puget6,sdf,SAC,Longest backtracked left branch,166.000000
+puget6,sdf,SAC,Longest chain of successful assignments,6
+puget6,sdf,SAC,First ten assignments backtracked,5
+puget6,sdf,SACBounds,Assignments,549
+puget6,sdf,SACBounds,Solutions,1
+puget6,sdf,SACBounds,Dead Ends,492
+puget6,sdf,SACBounds,Backtracks,963
+puget6,sdf,SACBounds,Backtracked left branches,122
+puget6,sdf,SACBounds,Average left branch length,15.959016
+puget6,sdf,SACBounds,Longest backtracked left branch,166.000000
+puget6,sdf,SACBounds,Longest chain of successful assignments,6
+puget6,sdf,SACBounds,First ten assignments backtracked,5
+puget6,sdf,SSAC,Assignments,546
+puget6,sdf,SSAC,Solutions,1
+puget6,sdf,SSAC,Dead Ends,490
+puget6,sdf,SSAC,Backtracks,960
+puget6,sdf,SSAC,Backtracked left branches,121
+puget6,sdf,SSAC,Average left branch length,16.082645
+puget6,sdf,SSAC,Longest backtracked left branch,166.000000
+puget6,sdf,SSAC,Longest chain of successful assignments,6
+puget6,sdf,SSAC,First ten assignments backtracked,4
+puget6,sdf,SSACBounds,Assignments,546
+puget6,sdf,SSACBounds,Solutions,1
+puget6,sdf,SSACBounds,Dead Ends,490
+puget6,sdf,SSACBounds,Backtracks,960
+puget6,sdf,SSACBounds,Backtracked left branches,121
+puget6,sdf,SSACBounds,Average left branch length,16.082645
+puget6,sdf,SSACBounds,Longest backtracked left branch,166.000000
+puget6,sdf,SSACBounds,Longest chain of successful assignments,6
+puget6,sdf,SSACBounds,First ten assignments backtracked,4
+puget6,srf,GAC,Assignments,549
+puget6,srf,GAC,Solutions,1
+puget6,srf,GAC,Dead Ends,492
+puget6,srf,GAC,Backtracks,963
+puget6,srf,GAC,Backtracked left branches,122
+puget6,srf,GAC,Average left branch length,15.959016
+puget6,srf,GAC,Longest backtracked left branch,166.000000
+puget6,srf,GAC,Longest chain of successful assignments,6
+puget6,srf,GAC,First ten assignments backtracked,5
+puget6,srf,None,Assignments,549
+puget6,srf,None,Solutions,1
+puget6,srf,None,Dead Ends,492
+puget6,srf,None,Backtracks,963
+puget6,srf,None,Backtracked left branches,122
+puget6,srf,None,Average left branch length,15.959016
+puget6,srf,None,Longest backtracked left branch,166.000000
+puget6,srf,None,Longest chain of successful assignments,6
+puget6,srf,None,First ten assignments backtracked,5
+puget6,srf,SAC,Assignments,549
+puget6,srf,SAC,Solutions,1
+puget6,srf,SAC,Dead Ends,492
+puget6,srf,SAC,Backtracks,963
+puget6,srf,SAC,Backtracked left branches,122
+puget6,srf,SAC,Average left branch length,15.959016
+puget6,srf,SAC,Longest backtracked left branch,166.000000
+puget6,srf,SAC,Longest chain of successful assignments,6
+puget6,srf,SAC,First ten assignments backtracked,5
+puget6,srf,SACBounds,Assignments,549
+puget6,srf,SACBounds,Solutions,1
+puget6,srf,SACBounds,Dead Ends,492
+puget6,srf,SACBounds,Backtracks,963
+puget6,srf,SACBounds,Backtracked left branches,122
+puget6,srf,SACBounds,Average left branch length,15.959016
+puget6,srf,SACBounds,Longest backtracked left branch,166.000000
+puget6,srf,SACBounds,Longest chain of successful assignments,6
+puget6,srf,SACBounds,First ten assignments backtracked,5
+puget6,srf,SSAC,Assignments,546
+puget6,srf,SSAC,Solutions,1
+puget6,srf,SSAC,Dead Ends,490
+puget6,srf,SSAC,Backtracks,960
+puget6,srf,SSAC,Backtracked left branches,121
+puget6,srf,SSAC,Average left branch length,16.082645
+puget6,srf,SSAC,Longest backtracked left branch,166.000000
+puget6,srf,SSAC,Longest chain of successful assignments,6
+puget6,srf,SSAC,First ten assignments backtracked,4
+puget6,srf,SSACBounds,Assignments,546
+puget6,srf,SSACBounds,Solutions,1
+puget6,srf,SSACBounds,Dead Ends,490
+puget6,srf,SSACBounds,Backtracks,960
+puget6,srf,SSACBounds,Backtracked left branches,121
+puget6,srf,SSACBounds,Average left branch length,16.082645
+puget6,srf,SSACBounds,Longest backtracked left branch,166.000000
+puget6,srf,SSACBounds,Longest chain of successful assignments,6
+puget6,srf,SSACBounds,First ten assignments backtracked,4
+puget6,static,GAC,Assignments,549
+puget6,static,GAC,Solutions,1
+puget6,static,GAC,Dead Ends,492
+puget6,static,GAC,Backtracks,963
+puget6,static,GAC,Backtracked left branches,122
+puget6,static,GAC,Average left branch length,15.959016
+puget6,static,GAC,Longest backtracked left branch,166.000000
+puget6,static,GAC,Longest chain of successful assignments,6
+puget6,static,GAC,First ten assignments backtracked,5
+puget6,static,None,Assignments,549
+puget6,static,None,Solutions,1
+puget6,static,None,Dead Ends,492
+puget6,static,None,Backtracks,963
+puget6,static,None,Backtracked left branches,122
+puget6,static,None,Average left branch length,15.959016
+puget6,static,None,Longest backtracked left branch,166.000000
+puget6,static,None,Longest chain of successful assignments,6
+puget6,static,None,First ten assignments backtracked,5
+puget6,static,SAC,Assignments,549
+puget6,static,SAC,Solutions,1
+puget6,static,SAC,Dead Ends,492
+puget6,static,SAC,Backtracks,963
+puget6,static,SAC,Backtracked left branches,122
+puget6,static,SAC,Average left branch length,15.959016
+puget6,static,SAC,Longest backtracked left branch,166.000000
+puget6,static,SAC,Longest chain of successful assignments,6
+puget6,static,SAC,First ten assignments backtracked,5
+puget6,static,SACBounds,Assignments,549
+puget6,static,SACBounds,Solutions,1
+puget6,static,SACBounds,Dead Ends,492
+puget6,static,SACBounds,Backtracks,963
+puget6,static,SACBounds,Backtracked left branches,122
+puget6,static,SACBounds,Average left branch length,15.959016
+puget6,static,SACBounds,Longest backtracked left branch,166.000000
+puget6,static,SACBounds,Longest chain of successful assignments,6
+puget6,static,SACBounds,First ten assignments backtracked,5
+puget6,static,SSAC,Assignments,546
+puget6,static,SSAC,Solutions,1
+puget6,static,SSAC,Dead Ends,490
+puget6,static,SSAC,Backtracks,960
+puget6,static,SSAC,Backtracked left branches,121
+puget6,static,SSAC,Average left branch length,16.082645
+puget6,static,SSAC,Longest backtracked left branch,166.000000
+puget6,static,SSAC,Longest chain of successful assignments,6
+puget6,static,SSAC,First ten assignments backtracked,4
+puget6,static,SSACBounds,Assignments,546
+puget6,static,SSACBounds,Solutions,1
+puget6,static,SSACBounds,Dead Ends,490
+puget6,static,SSACBounds,Backtracks,960
+puget6,static,SSACBounds,Backtracked left branches,121
+puget6,static,SSACBounds,Average left branch length,16.082645
+puget6,static,SSACBounds,Longest backtracked left branch,166.000000
+puget6,static,SSACBounds,Longest chain of successful assignments,6
+puget6,static,SSACBounds,First ten assignments backtracked,4
