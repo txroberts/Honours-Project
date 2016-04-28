@@ -64,12 +64,10 @@ public class MeasureNeo4j {
                     
                     long bt_left_branches = tree.getBtLeftBranches();
                     double avg_length = tree.getAvgLength();
-                    //long num_outlier_branches = tree.getNumOutlierBranches();
-                    //double prop_score = tree.getPropScore();
-                    //double de_ratio = tree.getDEARatio();
-                    
                     double longest_branch = tree.getLongestBranch();
                     int longest_good_chain = tree.getLongestEqualsChain();
+                    
+                    long bt_first_assignments = tree.getBTFirstAssignments();
                     
                     tree.shutDownDB();
                     
@@ -87,12 +85,10 @@ public class MeasureNeo4j {
                         
                         printWriter.printf("%s,%s,%d%n", problemDetails, "Backtracked left branches", bt_left_branches);
                         printWriter.printf("%s,%s,%f%n", problemDetails, "Average left branch length", avg_length);
-                        //printWriter.printf("%s,%s,%d%n", problemDetails, "Number of Outlier Left Branches", num_outlier_branches);
-                        //printWriter.printf("%s,%s,%f%n", problemDetails, "Normalised Constraint Propagation Score", prop_score);
-                        //printWriter.printf("%s,%s,%f%n", problemDetails, "Dead Ends/Assignments Ratio", de_ratio);
-                        
                         printWriter.printf("%s,%s,%f%n", problemDetails, "Longest backtracked left branch", longest_branch);
                         printWriter.printf("%s,%s,%d%n", problemDetails, "Longest chain of successful assignments", longest_good_chain);
+                        
+                        printWriter.printf("%s,%s,%d%n", problemDetails, "First ten assignments backtracked", bt_first_assignments);
 
                         printWriter.close();
                         fileWriter.close();
@@ -101,7 +97,6 @@ public class MeasureNeo4j {
                     }
                 }
             }
-            System.out.print("\r100% of databases measured\n");
         } else {
             System.out.println("Error - Expects:");
             System.out.println("(1) Directory of Neo4j databases");

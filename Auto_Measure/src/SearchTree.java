@@ -261,4 +261,26 @@ public class SearchTree {
         
         return 0; // if the db doesn't return a path
     }
+    
+    long getBTFirstAssignments() {
+        String query = "MATCH ()-[bt:BACKTRACK]->(a:Assignment) ";
+        query = query + "WHERE toInt(a.node_num) < 10 ";
+        query = query + "RETURN count(DISTINCT a) AS num_backtracked";
+        
+        Transaction tx = graphDb.beginTx();
+        
+        try {
+            Result result = graphDb.execute(query);
+            
+            if (result.hasNext()){
+                tx.success();
+                
+                return (long) result.next().get("num_backtracked");
+            }
+        } finally {
+            tx.close();
+        }
+        
+        return 0; // if the db doesn't return anything
+    }
 }
