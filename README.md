@@ -13,10 +13,13 @@ This project is **original research** that investigates whether graph databases 
 ## Contents
 ### 1. Parser
 A Python parser that parses a Minion search tree into the format required to load it into a Neo4j database
+
 ### 2. Auto_Measure
 A Java program that runs the set of Cypher queries against a directory of databases
+
 ### 3. Evaluation
-  1. The Essence' models, three instances of BIBD problem (Minion parameter files), and the Minion file for each BIBD problem
-  2. The data generated from the evaluation
+  a. The Essence' models, three instances of BIBD problem (Minion parameter files), and the Minion file for each BIBD problem
+  b. The data generated from the evaluation
+  
 ### 4. Batch files
 Automation scripts to speed up the parsing and loading process
