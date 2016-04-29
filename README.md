@@ -11,3 +11,10 @@ This project is **original research** that investigates whether graph databases 
 [Savile Row](http://savilerow.cs.st-andrews.ac.uk/), a constraint modelling assistant, was used to model a real world problem. The constraint solver [Minion](http://constraintmodelling.org/minion/) was used to solve the problem using different solving techniques. The search trees produced were then loaded into [Neo4j](http://neo4j.com/) to examine their shape and structure, and to discover interesting patterns in the graphs.
 
 ## Contents
+### 1. Parser
+A Python parser that parses a Minion search tree into the format required to load it into a Neo4j database
+### 2. Auto_Measure
+A Java program that runs the set of Cypher queries against a directory of databases
+### 3. Evaluation
+  1. The Essence' models, three instances of BIBD problem (Minion parameter files), and the Minion file for each BIBD problem
+  2. The data generated from the evaluation
