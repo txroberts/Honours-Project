@@ -18,3 +18,5 @@ A Java program that runs the set of Cypher queries against a directory of databa
 ### 3. Evaluation
   1. The Essence' models, three instances of BIBD problem (Minion parameter files), and the Minion file for each BIBD problem
   2. The data generated from the evaluation
+### 4. Batch files
+Automation scripts to speed up the parsing and loading process
